@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 p-8">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold mb-6 text-gray-800 text-center">VoteHub</h1>
+
+        <!-- Form to Add Member -->
+        <form onsubmit="submitHandler();return false" class="mb-6">
+            <label for="memberName" class="block text-sm font-medium text-gray-700 mb-2">Member Name:</label>
+            <input class="mt-1 p-3 border border-gray-300 rounded-md w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                   id="member" type="text" placeholder="Enter member name">
+            <button type="submit"
+                    class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md shadow-md transition duration-300 w-full">
+                Add Member
+            </button>
+        </form>
+
+        <!-- Container for Members -->
+        <div id="container" class="w-full max-w-2xl bg-gray-100 p-4 rounded-lg shadow-inner mb-6">
+            <!-- Members list will be dynamically generated here -->
+        </div>
+
+        <!-- Display for Highest Vote Member -->
+        <div class="text-lg font-semibold text-center text-red-600 mt-4" id="highestVoteMember">
+            <!-- Highest vote member name will be displayed here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
